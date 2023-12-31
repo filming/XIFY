@@ -24,8 +24,9 @@ To make note of its foundational capabilities, XIFY empowers users to execute a 
 
 ### Installing
 
-* Python can be downloaded from [here](https://www.python.org/)
+* Python can be downloaded from [here.](https://www.python.org/)
 * Install dependencies using `pip install -r requirements.txt` stored in main project directory.
+* Add your Twitter/X application API keys in the appropiate variables placed inside of the `.env` file.
 
 ### Executing program
 
