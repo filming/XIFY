@@ -9,6 +9,9 @@ from .tweet.media import get_media_id, format_media_ids
 STORAGE_DIR_PATH = "../storage"
 LOGS_DIR_PATH = f"{STORAGE_DIR_PATH}/logs"
 
+if not os.path.exists(STORAGE_DIR_PATH): os.mkdir(STORAGE_DIR_PATH)
+if not os.path.exists(LOGS_DIR_PATH): os.mkdir(LOGS_DIR_PATH)
+
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
@@ -25,13 +28,6 @@ class XIFY:
         self.auth_username = ""
 
         logger.info("An instance of XIFY has been created.")
-    
-    def setup(self):
-        # make sure logging storage is setup correctly
-        if not os.path.exists(STORAGE_DIR_PATH): os.mkdir(STORAGE_DIR_PATH)
-        if not os.path.exists(LOGS_DIR_PATH): os.mkdir(LOGS_DIR_PATH)
-
-        logger.info("The existance of the log directory for XIFY has been verified.")
 
     # create twitter authorized session object
     def create_tas(self):
